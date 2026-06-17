@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily Sharma | Software Engineer & System Architect</title>
+    <meta name="description" content="Software Engineer specializing in highly scalable backend architectures and modern frontend web applications using React.js, Next.js, HTML5, CSS3, Node.js, PHP, and Python.">
+    <meta name="keywords" content="Lily Sharma, Software Engineer, React.js, Next.js, HTML5, CSS3, Node.js, Redis, CodeIgniter, Python, MySQL, PostgreSQL, Postgres, MongoDB, NoSQL, RESTful API, Database Optimization, System Architecture, Payment Gateways, Web Developer Portfolio">
+    <meta name="author" content="Lily Sharma">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lily Sharma | Software Engineer & System Architect">
+    <meta property="og:description" content="Professional portfolio showcasing scalable backend systems, database performance tuning, Redis caching, and API architectures.">
+    <meta property="og:image" content="assets/portfolio_preview.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Decorative Glowing Mesh Grid Background -->
+    <div class="glowing-mesh" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="navbar-header" id="main-header">
+        <div class="container navbar-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="logo-accent">&lt;</span>Lily<span class="logo-text">.dev</span><span class="logo-accent">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+                    <li><a href="#skills" class="nav-link" id="link-skills">Skills</a></li>
+                    <li><a href="#experience" class="nav-link" id="link-experience">Experience</a></li>
+                    <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+                    <li><a href="#qualifications" class="nav-link" id="link-qualifications">Qualifications</a></li>
+                    <li><a href="#contact" class="nav-link contact-btn-nav" id="link-contact">Hire Me</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section scroll-reveal">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge"><i class="fa-solid fa-bolt text-accent"></i> Designing Systems that Scale & Drive Revenue</span>
+                    <h1 class="hero-title">
+                        Architecting Scalable <br>
+                        <span class="gradient-text">Systems & AI Solutions</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        I am a <span id="typewriter-text" class="typewriter-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Hi, I'm Lily Sharma. I help fast-growing startups and enterprises design resilient backend systems and high-speed web platforms. Combining <strong>Node.js</strong>, <strong>PHP</strong>, <strong>Python</strong>, and <strong>AWS</strong> with in-memory caching (<strong>Redis</strong>), containerization (<strong>Docker</strong>), and optimized databases (<strong>MySQL, PostgreSQL, MongoDB</strong>), I build architectural solutions that <strong>lower server costs by 40%</strong> and <strong>reduce API latency by 30%+</strong>.
+                    </p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary" id="btn-hero-projects">
+                            <span class="btn-text">View Work</span>
+                            <span class="btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline" id="btn-hero-contact">
+                            <span class="btn-text">Get in Touch</span>
+                            <span class="btn-icon"><i class="fa-solid fa-envelope"></i></span>
+                        </a>
+                    </div>
+
+                    <div class="hero-social-links">
+                        <a href="https://github.com/lily-002" target="_blank" rel="noopener noreferrer" class="social-icon" id="hero-github" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lily-sharma-002/" target="_blank" rel="noopener noreferrer" class="social-icon" id="hero-linkedin" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:lilysharma002@gmail.com" class="social-icon" id="hero-email" aria-label="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-avatar-wrapper glass-card">
+                        <img src="assets/developer_avatar.png" alt="Lily Sharma - Backend & AI Architect" class="hero-avatar-img" id="hero-avatar">
+                        <div class="avatar-glow-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Overview Section -->
+        <section class="stats-section scroll-reveal" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass-card" id="stat-experience">
+                        <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <h3 class="stat-number">5+</h3>
+                        <p class="stat-label">Years Backend Experience</p>
+                    </div>
+                    <div class="stat-card glass-card" id="stat-automation">
+                        <div class="stat-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3 class="stat-number">70%</h3>
+                        <p class="stat-label">Workflow Automation Rate</p>
+                    </div>
+                    <div class="stat-card glass-card" id="stat-perf">
+                        <div class="stat-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <h3 class="stat-number">30%</h3>
+                        <p class="stat-label">API Latency Reduction</p>
+                    </div>
+                    <div class="stat-card glass-card" id="stat-uptime">
+                        <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <h3 class="stat-number">99.9%</h3>
+                        <p class="stat-label">Production Release Stability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Introduction</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <h3 class="about-greeting">I bridge the gap between complex system architecture and real business goals.</h3>
+                        <p class="about-paragraph">
+                            Over the past 5+ years, I have engineered and launched high-load financial software, multi-tenant LMS portals, and dynamic enterprise CRMs. My mission is to build software that scales effortlessly with your user growth. I specialize in diagnosing server bottlenecks, designing high-throughput REST/GraphQL APIs, and deploying zero-downtime CI/CD workflows.
+                        </p>
+                        <p class="about-paragraph">
+                            Whether you need to integrate a complex payment gateway matrix (Stripe, Razorpay, Tabby, Tamara), decrease database load using <strong>Redis</strong> caching, containerize applications with <strong>Docker</strong> for cloud portability, or integrate Generative AI capabilities (LLM workflows and vector search)—I deliver clean, maintainable code engineered to scale.
+                        </p>
+                        
+                        <div class="about-points">
+                            <div class="point-item">
+                                <span class="point-icon"><i class="fa-solid fa-circle-check"></i></span>
+                                <span class="point-text"><strong>Fintech & Payment Integration:</strong> Bulletproof integration of payment corridors with secure webhook transaction safety.</span>
+                            </div>
+                            <div class="point-item">
+                                <span class="point-icon"><i class="fa-solid fa-circle-check"></i></span>
+                                <span class="point-text"><strong>Database Tuning & Cache:</strong> Hands-on optimization of SQL queries, indexing strategies, and Redis data models.</span>
+                            </div>
+                            <div class="point-item">
+                                <span class="point-icon"><i class="fa-solid fa-circle-check"></i></span>
+                                <span class="point-text"><strong>Engineering Lead:</strong> Experienced mentor guiding team code quality, strict Git-flow operations, and unit test automation.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-details-card glass-card">
+                        <div class="details-header">
+                            <h4>Core Developer Profile</h4>
+                        </div>
+                        <ul class="details-list">
+                            <li>
+                                <span class="details-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                                <span class="details-val"><a href="mailto:lilysharma002@gmail.com">lilysharma002@gmail.com</a></span>
+                            </li>
+                            <li>
+                                <span class="details-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                                <span class="details-val"><a href="tel:+918076369563">+91 8076369563</a></span>
+                            </li>
+                            <li>
+                                <span class="details-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                                <span class="details-val">New Delhi, India</span>
+                            </li>
+                            <li>
+                                <span class="details-label"><i class="fa-solid fa-briefcase"></i> Work Status:</span>
+                                <span class="details-val"><span class="status-indicator"></span> Available for Hiring</span>
+                            </li>
+                        </ul>
+                        <div class="details-footer">
+                            <a href="#contact" class="btn btn-primary btn-full" id="about-hire-btn">Hire Lily Sharma</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Capabilities</span>
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Skill Filters -->
+                <div class="skills-filter" id="skills-filter-container">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All Skills</button>
+                    <button class="filter-btn" data-filter="languages" id="filter-lang">Languages</button>
+                    <button class="filter-btn" data-filter="frontend" id="filter-front">Frontend Development</button>
+                    <button class="filter-btn" data-filter="backend" id="filter-back">Backend Frameworks</button>
+                    <button class="filter-btn" data-filter="databases" id="filter-db">Databases & Caching</button>
+                    <button class="filter-btn" data-filter="tools" id="filter-tools">DevOps & Tools</button>
+                    <button class="filter-btn" data-filter="ai" id="filter-ai">AI & Deep Learning</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skills-display-grid">
+                    <!-- Languages -->
+                    <div class="skill-card glass-card" data-category="languages" id="skill-php">
+                        <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
+                        <h4 class="skill-name">PHP</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        <span class="skill-level">90% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="languages" id="skill-js">
+                        <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="languages" id="skill-python">
+                        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                        <h4 class="skill-name">Python</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                        <span class="skill-level">80% - Proficient</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="languages" id="skill-sql">
+                        <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                        <h4 class="skill-name">SQL</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        <span class="skill-level">90% - Advanced</span>
+                    </div>
+
+                    <!-- Frontend Development -->
+                    <div class="skill-card glass-card highlight-skill" data-category="frontend" id="skill-react">
+                        <div class="skill-icon"><i class="devicon-react-original colored"></i></div>
+                        <h4 class="skill-name">React.js (Component Architecture)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        <span class="skill-level">88% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="frontend" id="skill-nextjs">
+                        <div class="skill-icon"><i class="devicon-nextjs-original-wordmark"></i></div>
+                        <h4 class="skill-name">Next.js (SSR & SSG Engines)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - Proficient</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="frontend" id="skill-html5">
+                        <div class="skill-icon"><i class="devicon-html5-plain colored"></i></div>
+                        <h4 class="skill-name">HTML5 (Semantic Layouts)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                        <span class="skill-level">95% - Expert</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="frontend" id="skill-css3">
+                        <div class="skill-icon"><i class="devicon-css3-plain colored"></i></div>
+                        <h4 class="skill-name">CSS3 (Modern Responsive UI)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        <span class="skill-level">90% - Advanced</span>
+                    </div>
+
+                    <!-- Backend Frameworks -->
+                    <div class="skill-card glass-card" data-category="backend" id="skill-node">
+                        <div class="skill-icon"><i class="fa-brands fa-node-js"></i></div>
+                        <h4 class="skill-name">Node.js (Express/NestJS)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        <span class="skill-level">88% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="backend" id="skill-codeigniter">
+                        <div class="skill-icon"><i class="fa-solid fa-fire"></i></div>
+                        <h4 class="skill-name">CodeIgniter 3</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                        <span class="skill-level">95% - Expert</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="backend" id="skill-corephp">
+                        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                        <h4 class="skill-name">Core PHP</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        <span class="skill-level">90% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="backend" id="skill-apis">
+                        <div class="skill-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h4 class="skill-name">RESTful APIs & Integrations</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                        <span class="skill-level">95% - Expert</span>
+                    </div>
+
+                    <!-- Databases & Caching -->
+                    <div class="skill-card glass-card highlight-skill" data-category="databases" id="skill-redis">
+                        <div class="skill-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4 class="skill-name">Redis (In-Memory / Cache)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - Advanced caching</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="databases" id="skill-mysql">
+                        <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                        <h4 class="skill-name">MySQL (Database Tuning)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        <span class="skill-level">90% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="databases" id="skill-postgresql">
+                        <div class="skill-icon"><i class="devicon-postgresql-plain colored"></i></div>
+                        <h4 class="skill-name">PostgreSQL (Query Tuning)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                        <span class="skill-level">88% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="databases" id="skill-mongodb">
+                        <div class="skill-icon"><i class="devicon-mongodb-plain colored"></i></div>
+                        <h4 class="skill-name">MongoDB (NoSQL Store)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - Proficient</span>
+                    </div>
+
+                    <!-- Tools & Concepts -->
+                    <div class="skill-card glass-card" data-category="tools" id="skill-git">
+                        <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <h4 class="skill-name">Git & GitHub</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        <span class="skill-level">90% - Expert</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="tools" id="skill-servers">
+                        <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <h4 class="skill-name">Nginx & Apache Web Servers</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                        <span class="skill-level">80% - Proficient</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="tools" id="skill-testing">
+                        <div class="skill-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                        <h4 class="skill-name">Unit & Manual Testing</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - Advanced</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="tools" id="skill-sysdesign">
+                        <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h4 class="skill-name">System Design & Architecture</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - Advanced</span>
+                    </div>
+
+                    <!-- AI & Machine Learning -->
+                    <div class="skill-card glass-card" data-category="ai" id="skill-llm">
+                        <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h4 class="skill-name">Large Language Models (LLMs)</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+                        <span class="skill-level">82% - Llama, OpenAI, Claude Integration</span>
+                    </div>
+                    <div class="skill-card glass-card" data-category="ai" id="skill-genai">
+                        <div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h4 class="skill-name">Generative AI & Agentic Workflows</h4>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        <span class="skill-level">85% - LangChain, RAG Pipelines, Vector DBs</span>
+                    </div>
+                </div>
+
+                <!-- ATS Core Expertise Grid -->
+                <div class="expertise-row">
+                    <h3 class="expertise-title"><i class="fa-solid fa-star text-accent"></i> Core Engineering Expertise</h3>
+                    <div class="expertise-grid">
+                        <div class="expertise-card glass-card">
+                            <h5>High-Concurrency Redis Caching</h5>
+                            <p>Utilize Redis for session storage, query caching, API rate limiting, and temporary queues to dramatically cut down main database access latency.</p>
+                        </div>
+                        <div class="expertise-card glass-card">
+                            <h5>Complex Payment Pipelines</h5>
+                            <p>Proven execution of dynamic payment processors (Stripe, Razorpay, PhonePe, Tamara) handling dual-capture, subscription cycles, and webhook fail-safes.</p>
+                        </div>
+                        <div class="expertise-card glass-card">
+                            <h5>LMS & CRM Architecture</h5>
+                            <p>Structured complex relational models for tracking multi-layered user progressions, automated leads distribution algorithms, and heavy file asset uploads.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Work Experience Section -->
+        <section id="experience" class="experience-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Chronology</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Experience Item 1 -->
+                    <div class="timeline-item left" id="exp-tecnior">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> Mar 2023 – Present</span>
+                            <h3 class="timeline-role">Software Engineer</h3>
+                            <h4 class="timeline-company">Tecnior Technologies</h4>
+                            <p class="timeline-description">
+                                Leading the server-side architectural design and backend execution using CodeIgniter 3, Node.js, and Python. Delivering scalable platforms for over 1,000 active enterprises.
+                            </p>
+                            <ul class="timeline-bullets">
+                                <li>Engineered and launched multi-tenant LMS and Forex Trading CRM software, automating lead workflows, payment queues, and user permissions to <strong>reduce manual work by 70%</strong> and bump client engagement by 55%.</li>
+                                <li>Developed dynamic user interfaces and dashboard modules using <strong>React.js</strong> and <strong>Next.js</strong>, optimizing front-end bundle size and loading speed by 25%.</li>
+                                <li>Implemented <strong>Redis-based API response caching</strong> to minimize SQL query hits, improving critical system data retrieval times by 30%.</li>
+                                <li>Designed enterprise-grade REST APIs for third-party platforms (Stripe, Razorpay, PhonePe, Tabby, Tamara, Zoom API) ensuring 100% secure webhook verification and retry handlers.</li>
+                                <li>Supervised and mentored a team of 5 junior backend engineers, establishing Git-flow guidelines and clean architecture patterns to increase overall team output by 20%.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Redis</span>
+                                <span class="tag">CodeIgniter 3</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="timeline-item right" id="exp-vvdn">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> Jul 2021 – Mar 2023</span>
+                            <h3 class="timeline-role">Backend Developer</h3>
+                            <h4 class="timeline-company">VVDN Technologies</h4>
+                            <p class="timeline-description">
+                                Designed, developed, and maintained core server architectures using PHP and Node.js for high-availability enterprise services.
+                            </p>
+                            <ul class="timeline-bullets">
+                                <li>Refactored legacy modules in Core PHP, reducing application server crashes and database locking issues, which <strong>slashed system downtime by 40%</strong>.</li>
+                                <li>Developed clean REST API structures for web and mobile components, accelerating backend-to-client communication speed by 50%.</li>
+                                <li>Built responsive layouts and modular UI elements using semantic <strong>HTML5</strong> and <strong>CSS3</strong>, ensuring full compatibility across devices.</li>
+                                <li>Integrated comprehensive unit test configurations and manual integration scripts, maintaining <strong>99.9% bug-free production rollouts</strong>.</li>
+                                <li>Collaborated directly with product owners to develop custom internal CRM integrations, improving team sales tracking productivity by 40%.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Core PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">RESTful APIs</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">Unit Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Highlights Section -->
+        <section id="projects" class="projects-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2 class="section-title">Project Case Studies</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card" id="project-fxcareers">
+                        <div class="project-img-container">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-graduation-cap project-placeholder-icon"></i>
+                            <div class="project-badge">LMS & CRM</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">FXCareers – Scalable Educational LMS & CRM</h3>
+                            <p class="project-desc">
+                                A high-load educational portal structured with flexible course builders, student tracks, and automatic lead registration. Employs <strong>Redis</strong> for state caching and integrated checkout lanes.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">55%</span>
+                                    <span class="metric-lbl">User Engagement Up</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">&lt; 150ms</span>
+                                    <span class="metric-lbl">API Response Time</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>CodeIgniter</span>
+                                <span>MySQL</span>
+                                <span>Redis</span>
+                                <span>REST APIs</span>
+                                <span>Razorpay / Stripe</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://fxcareers.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-fxcareers">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-fxcareers" id="btn-fxcareers-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-fxcareers">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li>Dual database architecture utilizing Redis cache keys to bypass relational lookups for static configurations.</li>
+                                    <li>Token-based authentication middleware checking roles instantly.</li>
+                                    <li>Integration of Zoom meeting scheduling webhooks directly with automated student dashboard update alerts.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card" id="project-nxgmarkets">
+                        <div class="project-img-container" style="background-image: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.9) 100%), url('assets/nxg_markets_hero.png');">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-chart-line project-placeholder-icon" style="opacity: 0.15;"></i>
+                            <div class="project-badge">Fintech & Trading</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">NXG Markets – Forex & CFD Brokerage Infrastructure</h3>
+                            <p class="project-desc">
+                                Scalable backend systems for an international brokerage. Architected the API gateway connecting MetaTrader 5 (MT5) with the client CRM dashboard, managing live funding, payment pipelines, and Introducing Broker commission distributions.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">&gt; $20M+</span>
+                                    <span class="metric-lbl">Monthly Volume</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">&lt; 80ms</span>
+                                    <span class="metric-lbl">MT5 Sync Latency</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>Next.js</span>
+                                <span>Node.js</span>
+                                <span>MySQL</span>
+                                <span>Redis Caching</span>
+                                <span>MT5 Manager API</span>
+                                <span>Payment APIs</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://nxgmarkets.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-nxgmarkets">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-nxgmarkets" id="btn-nxgmarkets-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-nxgmarkets">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li>Integrated MT5 manager API sockets to synchronize account balance, leverage, and margins dynamically.</li>
+                                    <li>Built Introducing Broker (IB) commission distribution logic featuring automated calculation queues and partner dashboard updates.</li>
+                                    <li>Implemented secure multi-channel payment gateways routing deposits/withdrawals via secure merchant webhooks.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card" id="project-traderscheck">
+                        <div class="project-img-container" style="background-image: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.9) 100%), url('assets/traderscheck_dashboard.png');">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-shield-halved project-placeholder-icon" style="opacity: 0.15;"></i>
+                            <div class="project-badge">SaaS & Security</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">TradersCheck – Collaborative Broker Risk Intelligence</h3>
+                            <p class="project-desc">
+                                A centralized risk-sharing network and compliance portal for Forex Brokers. Enables secure, encrypted queries and reporting of abusive trader profiles to block repeating financial fraud across the brokerage network.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">&lt; 50ms</span>
+                                    <span class="metric-lbl">Profile Match Time</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">100% Secure</span>
+                                    <span class="metric-lbl">Encrypted Sync</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>ReactJS</span>
+                                <span>TypeScript</span>
+                                <span>Tailwind CSS</span>
+                                <span>Node.js</span>
+                                <span>Knex (SQLite)</span>
+                                <span>MFA / OTP Auth</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://traderscheck.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-traderscheck">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-traderscheck" id="btn-traderscheck-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-traderscheck">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li>Automated identity-matching engine querying encrypted name, DOB, and document signatures.</li>
+                                    <li>Broker legal agreement signing flow backed by digital signatures and dynamic PDF agreement generators.</li>
+                                    <li>Multi-tenant broker dashboard displaying complaint analytics, search audit logs, and admin-managed KYC scan limits.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card" id="project-tecnior">
+                        <div class="project-img-container" style="background-image: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.9) 100%), url('assets/tecnior_hero.png');">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-laptop-code project-placeholder-icon" style="opacity: 0.15;"></i>
+                            <div class="project-badge">IT Solutions & Agency</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Tecnior Technologies – Corporate Site & Client Hub</h3>
+                            <p class="project-desc">
+                                Core corporate platform and client solutions index for Tecnior Technologies. Built high-availability services presenting custom Fintech, E-Commerce, and Healthcare SaaS capabilities.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">+45%</span>
+                                    <span class="metric-lbl">Lead Automation</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">98</span>
+                                    <span class="metric-lbl">PageSpeed Score</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>Next.js</span>
+                                <span>React.js</span>
+                                <span>Tailwind CSS</span>
+                                <span>PHP (Laravel)</span>
+                                <span>Nginx Caching</span>
+                                <span>REST APIs</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://tecnior.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-tecnior-corp">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-tecnior" id="btn-tecnior-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-tecnior">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li>Configured hybrid static-site generation (SSG) with incremental static regeneration (ISR) for sub-second page loads.</li>
+                                    <li>Built secure customer inquiry CRM connectors routing leads dynamically to backend handlers.</li>
+                                    <li>Optimized cloud resource delivery by staging assets behind Nginx caching layers and Cloudflare.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass-card" id="project-yatriniwas">
+                        <div class="project-img-container" style="background-image: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.9) 100%), url('assets/yatriniwas_homepage.png');">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-hotel project-placeholder-icon" style="opacity: 0.15;"></i>
+                            <div class="project-badge">Hospitality & SaaS</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">Ayodhya Yatri Niwas – Booking & Property Management</h3>
+                            <p class="project-desc">
+                                A comprehensive hospitality management ecosystem built for the Yatri Niwas Foundation. Features a public booking portal, a multi-role front-desk administration dashboard, and a Knex-backed REST API.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">5 Portals</span>
+                                    <span class="metric-lbl">Staff Subsystems</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">100% Automated</span>
+                                    <span class="metric-lbl">Invoicing & Settle</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>Next.js</span>
+                                <span>React.js</span>
+                                <span>Node.js</span>
+                                <span>Express API</span>
+                                <span>SQLite (Knex)</span>
+                                <span>styled-components</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://ayodhyayatriniwas.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-yatriniwas">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-yatriniwas" id="btn-yatriniwas-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-yatriniwas">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li>Multi-portal staff dashboard allowing separate role log actions for front-desk (quick booking), housekeeping (room status), kitchen (food orders), and security (parking entries/exits logs).</li>
+                                    <li>Dynamic invoice compiler generating booking rates, custom addons, and manual payments into print-ready PDF slips.</li>
+                                    <li>Highly optimized Next.js booking engine utilizing AOS slide transitions, photoswipe galleries, and dynamic QR booking keys.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass-card" id="project-tecniorone">
+                        <div class="project-img-container" style="background-image: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.9) 100%), url('assets/tecnior_one_dashboard.png');">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-users-gear project-placeholder-icon" style="opacity: 0.15;"></i>
+                            <div class="project-badge">Enterprise SaaS & CRM</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">TecniorOne – AI-Native Revenue Operating System</h3>
+                            <p class="project-desc">
+                                A microservices-based enterprise CRM platform orchestrating pipelines, multi-channel marketing campaigns, client ticket SLAs, and AI-driven win predictions.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">15+ Services</span>
+                                    <span class="metric-lbl">Microservices</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">Kafka Hub</span>
+                                    <span class="metric-lbl">Event Streaming</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>React (TS)</span>
+                                <span>FastAPI (Python)</span>
+                                <span>PostgreSQL (RLS)</span>
+                                <span>Apache Kafka</span>
+                                <span>MongoDB Atlas</span>
+                                <span>Elasticsearch</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://one.tecnior.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-tecniorone">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-tecniorone" id="btn-tecniorone-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-tecniorone">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li>Granular multi-tenant isolation utilizing PostgreSQL Row-Level Security (RLS) schemas.</li>
+                                    <li>Asynchronous event-driven communication via Apache Kafka for audit logs, webhooks, and inter-service coordination.</li>
+                                    <li>AI pipeline running PyTorch deal win probability models and support ticket automated sentiment analysis.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 - LoanForDays -->
+                    <div class="project-card glass-card" id="project-loanfordays">
+                        <div class="project-img-container" style="background-image: linear-gradient(180deg, rgba(10, 14, 23, 0.15) 0%, rgba(10, 14, 23, 0.9) 100%), url('assets/loanfordays.png');">
+                            <div class="project-overlay-glow"></div>
+                            <i class="fa-solid fa-hand-holding-dollar project-placeholder-icon" style="opacity: 0.15;"></i>
+                            <div class="project-badge">Fintech & Lending</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-name">LoanForDays – Digital Micro-Lending & Risk Valuation Hub</h3>
+                            <p class="project-desc">
+                                A high-performance digital lending platform automating personal credit appraisal, loan matching algorithms, and repayment schedules. Built with secure banking verification hooks and caching structures to handle heavy volumes.
+                            </p>
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-val">120K+ Loans</span>
+                                    <span class="metric-lbl">Approved & Funded</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-val">&lt; 95ms</span>
+                                    <span class="metric-lbl">Rate Calculations</span>
+                                </div>
+                            </div>
+                            <div class="project-tech-stack">
+                                <span>Next.js</span>
+                                <span>Node.js</span>
+                                <span>Redis Caching</span>
+                                <span>MySQL</span>
+                                <span>Credit scoring APIs</span>
+                                <span>Stripe / Razorpay</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://loanfordays.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" id="link-loanfordays">
+                                    Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <button class="btn btn-outline btn-sm details-trigger" data-target="details-loanfordays" id="btn-loanfordays-details">
+                                    System Details <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <!-- Expandable System Details -->
+                            <div class="project-hidden-details" id="details-loanfordays">
+                                <div class="details-divider"></div>
+                                <h6>System Architecture Highlights:</h6>
+                                <ul>
+                                    <li><strong>In-Memory Cache (Redis)</strong>: Caches interest tier rates, loan calculations, and active applicant sessions to lower SQL load under peak traffic.</li>
+                                    <li><strong>Underwriting Automation</strong>: Real-time integration with credit bureau verification APIs and automated fraud indicator validations.</li>
+                                    <li><strong>Scheduled Direct Debits</strong>: Configured automated recurring payment collections via merchant gateways with retry pipelines.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications Section (AT THE BOTTOM AS REQUESTED) -->
+        <section id="qualifications" class="qualifications-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Academic Credentials</span>
+                    <h2 class="section-title">Education & Qualifications</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="qualifications-grid">
+                    <!-- Qualification 1 -->
+                    <div class="qualification-card glass-card" id="qual-diploma">
+                        <div class="qual-badge"><i class="fa-solid fa-graduation-cap"></i> Technical Diploma</div>
+                        <div class="qual-content">
+                            <h3 class="qual-degree">Diploma in Computer Science Engineering</h3>
+                            <h4 class="qual-institution">Haryana State Board of Technical Education, Haryana</h4>
+                            <span class="qual-time"><i class="fa-solid fa-calendar-day"></i> Aug 2018 - Jun 2021</span>
+                            <p class="qual-desc">
+                                Rigorous foundation in data structures, algorithms, operating systems, database management systems (DBMS), and network protocols.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Qualification 2 -->
+                    <div class="qualification-card glass-card" id="qual-secondary">
+                        <div class="qual-badge"><i class="fa-solid fa-school"></i> School Education</div>
+                        <div class="qual-content">
+                            <h3 class="qual-degree">Senior Secondary School Certificate (CBSE)</h3>
+                            <h4 class="qual-institution">R.P.V.V, Narela, New Delhi</h4>
+                            <span class="qual-time"><i class="fa-solid fa-calendar-day"></i> Apr 2017 - Mar 2018</span>
+                            <p class="qual-desc">
+                                Specialized science track with focus on mathematics, physics, and computer science fundamentals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding scroll-reveal">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Collaboration</span>
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- Left: Contact Details -->
+                    <div class="contact-info-panel glass-card">
+                        <h3>Connect Directly</h3>
+                        <p>Have an interesting project, contract, or full-time position available? Reach out and I will get back to you within 24 hours.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="info-text">
+                                    <span>Send an Email</span>
+                                    <strong><a href="mailto:lilysharma002@gmail.com">lilysharma002@gmail.com</a></strong>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-text">
+                                    <span>Direct Line</span>
+                                    <strong><a href="tel:+918076369563">+91 8076369563</a></strong>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="info-text">
+                                    <span>Location</span>
+                                    <strong>New Delhi, India (GMT +5:30)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-socials-wrapper">
+                            <h4>Find me on</h4>
+                            <div class="contact-social-icons">
+                                <a href="https://github.com/lily-002" target="_blank" rel="noopener noreferrer" class="social-icon" id="contact-github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/lily-sharma-002/" target="_blank" rel="noopener noreferrer" class="social-icon" id="contact-linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Contact Form -->
+                    <div class="contact-form-panel glass-card">
+                        <h3>Send a Message</h3>
+                        <form id="portfolio-contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Your Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Your Email</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                    <input type="text" id="form-subject" placeholder="Project collaboration / Job offer" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="5" placeholder="Details about your project, team, or opportunity..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                            </button>
+                            
+                            <!-- Form feedback messaging -->
+                            <div class="form-feedback" id="form-feedback-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-accent">&lt;</span>Lily<span class="logo-text">.dev</span><span class="logo-accent">/&gt;</span>
+                </a>
+                <p>Engineering performant backend systems and high-throughput databases. Certified and optimized caching solutions.</p>
+            </div>
+            
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#qualifications">Qualifications</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lily Sharma. All rights reserved.</p>
+                <div class="footer-credit">Designed and coded with <i class="fa-solid fa-heart text-accent"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#home" class="back-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
