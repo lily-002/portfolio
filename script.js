@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!typewriterText) return;
 
         const currentRole = roles[roleIndex];
-        
+
         if (isDeleting) {
             typewriterText.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER)
     // ==========================================================================
     const revealElements = document.querySelectorAll('.scroll-reveal');
-    
+
     if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             skillCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
-                
+
                 if (filterCategory === 'all' || cardCategory === filterCategory) {
                     card.classList.remove('hidden');
                     // Reset animation sequence
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (detailsElement) {
                 const isExpanded = detailsElement.classList.contains('expanded');
-                
+
                 // Toggle details element height/opacity
                 if (isExpanded) {
                     detailsElement.classList.remove('expanded');
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('form-submit-btn');
 
     // Replace this with your Web3Forms Access Key from your email!
-    const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+    const WEB3FORMS_ACCESS_KEY = "4e8cabd6-1c53-4455-8cd3-847f6aec70b2";
 
     if (contactForm && formFeedback && submitBtn) {
         contactForm.addEventListener('submit', (e) => {
@@ -244,42 +244,42 @@ document.addEventListener('DOMContentLoaded', () => {
                     message: message
                 })
             })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success === 'true' || data.success === true) {
-                    // Display success messaging
-                    formFeedback.textContent = `Thank you, ${name}! Your message has been sent successfully. I will get in touch with you soon.`;
-                    formFeedback.className = 'form-feedback success';
-                    formFeedback.style.display = 'block';
-                    
-                    // Reset form fields
-                    contactForm.reset();
-                } else {
-                    throw new Error(data.message || 'Web3Forms responded with error status');
-                }
-            })
-            .catch(error => {
-                console.error('Contact submission error:', error);
-                // Display error messaging
-                formFeedback.textContent = 'Oops! There was a problem sending your message. Please try again or email me directly.';
-                formFeedback.className = 'form-feedback error';
-                formFeedback.style.display = 'block';
-            })
-            .finally(() => {
-                // Restore button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnHtml;
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success === 'true' || data.success === true) {
+                        // Display success messaging
+                        formFeedback.textContent = `Thank you, ${name}! Your message has been sent successfully. I will get in touch with you soon.`;
+                        formFeedback.className = 'form-feedback success';
+                        formFeedback.style.display = 'block';
 
-                // Hide feedback after 8 seconds
-                setTimeout(() => {
-                    formFeedback.style.display = 'none';
-                }, 8000);
-            });
+                        // Reset form fields
+                        contactForm.reset();
+                    } else {
+                        throw new Error(data.message || 'Web3Forms responded with error status');
+                    }
+                })
+                .catch(error => {
+                    console.error('Contact submission error:', error);
+                    // Display error messaging
+                    formFeedback.textContent = 'Oops! There was a problem sending your message. Please try again or email me directly.';
+                    formFeedback.className = 'form-feedback error';
+                    formFeedback.style.display = 'block';
+                })
+                .finally(() => {
+                    // Restore button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnHtml;
+
+                    // Hide feedback after 8 seconds
+                    setTimeout(() => {
+                        formFeedback.style.display = 'none';
+                    }, 8000);
+                });
         });
     }
 });
