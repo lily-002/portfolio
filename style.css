@@ -1651,3 +1651,15 @@ button, input, textarea {
         padding: 24px;
     }
 }
+
+/* Honeypot — completely off-screen and inaccessible to real users */
+.hp-trap {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}

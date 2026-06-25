@@ -7,7 +7,13 @@
     <meta name="description" content="Software Engineer specializing in highly scalable backend architectures and modern frontend web applications using React.js, Next.js, HTML5, CSS3, Node.js, PHP, and Python.">
     <meta name="keywords" content="Lily Sharma, Software Engineer, React.js, Next.js, HTML5, CSS3, Node.js, Redis, CodeIgniter, Python, MySQL, PostgreSQL, Postgres, MongoDB, NoSQL, RESTful API, Database Optimization, System Architecture, Payment Gateways, Web Developer Portfolio">
     <meta name="author" content="Lily Sharma">
-    
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action https://api.web3forms.com; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Lily Sharma | Software Engineer & System Architect">
@@ -182,10 +188,6 @@
                             <li>
                                 <span class="details-label"><i class="fa-solid fa-envelope"></i> Email:</span>
                                 <span class="details-val"><a href="mailto:lilysharma002@gmail.com">lilysharma002@gmail.com</a></span>
-                            </li>
-                            <li>
-                                <span class="details-label"><i class="fa-solid fa-phone"></i> Phone:</span>
-                                <span class="details-val"><a href="tel:+918076369563">+91 8076369563</a></span>
                             </li>
                             <li>
                                 <span class="details-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
@@ -899,15 +901,6 @@
                                     <strong><a href="mailto:lilysharma002@gmail.com">lilysharma002@gmail.com</a></strong>
                                 </div>
                             </div>
-                            
-                            <div class="info-item">
-                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-                                <div class="info-text">
-                                    <span>Direct Line</span>
-                                    <strong><a href="tel:+918076369563">+91 8076369563</a></strong>
-                                </div>
-                            </div>
-
                             <div class="info-item">
                                 <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
                                 <div class="info-text">
@@ -930,25 +923,30 @@
                     <div class="contact-form-panel glass-card">
                         <h3>Send a Message</h3>
                         <form id="portfolio-contact-form">
+                            <!-- Honeypot: bots fill this, humans don't see it -->
+                            <div class="hp-trap" aria-hidden="true">
+                                <label for="hp-website">Website</label>
+                                <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="form-name">Your Name</label>
-                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                    <input type="text" id="form-name" placeholder="John Doe" required minlength="2" maxlength="100" autocomplete="name">
                                 </div>
                                 <div class="form-group">
                                     <label for="form-email">Your Email</label>
-                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required maxlength="254" autocomplete="email">
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="form-subject">Subject</label>
-                                    <input type="text" id="form-subject" placeholder="Project collaboration / Job offer" required>
+                                    <input type="text" id="form-subject" placeholder="Project collaboration / Job offer" required minlength="3" maxlength="200" autocomplete="off">
                             </div>
 
                             <div class="form-group">
                                 <label for="form-message">Message</label>
-                                <textarea id="form-message" rows="5" placeholder="Details about your project, team, or opportunity..." required></textarea>
+                                <textarea id="form-message" rows="5" placeholder="Details about your project, team, or opportunity..." required minlength="10" maxlength="2000"></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">

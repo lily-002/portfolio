@@ -212,24 +212,108 @@ document.addEventListener('DOMContentLoaded', () => {
     const formFeedback = document.getElementById('form-feedback-message');
     const submitBtn = document.getElementById('form-submit-btn');
 
-    // Replace this with your Web3Forms Access Key from your email!
     const WEB3FORMS_ACCESS_KEY = "4e8cabd6-1c53-4455-8cd3-847f6aec70b2";
+
+    // Start the clock only when the contact section scrolls into view.
+    // Bots that wait a few seconds after page load would bypass a DOMContentLoaded
+    // timestamp, but they still submit before a real user has read and typed.
+    let formVisibleTime = null;
+    const contactSection = document.getElementById('contact');
+    if (contactSection && 'IntersectionObserver' in window) {
+        const visibilityWatcher = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && formVisibleTime === null) {
+                    formVisibleTime = Date.now();
+                    visibilityWatcher.disconnect();
+                }
+            });
+        }, { threshold: 0.2 });
+        visibilityWatcher.observe(contactSection);
+    } else {
+        formVisibleTime = Date.now();
+    }
+
+    // --- Security helpers ---
+
+    function sanitizeInput(str) {
+        return String(str).trim().replace(/[<>"'`]/g, '');
+    }
+
+    function validateEmail(email) {
+        return /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/.test(email);
+    }
+
+    function isRateLimited() {
+        const KEY = 'pf_contact_ts';
+        const MAX = 3;
+        const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+        try {
+            const stored = JSON.parse(localStorage.getItem(KEY) || '[]');
+            const now = Date.now();
+            const recent = stored.filter(ts => now - ts < WINDOW_MS);
+            if (recent.length >= MAX) return true;
+            recent.push(now);
+            localStorage.setItem(KEY, JSON.stringify(recent));
+            return false;
+        } catch (_) {
+            return false;
+        }
+    }
+
+    function showFeedback(msg, type) {
+        formFeedback.textContent = msg;
+        formFeedback.className = `form-feedback ${type}`;
+        formFeedback.style.display = 'block';
+        setTimeout(() => { formFeedback.style.display = 'none'; }, 8000);
+    }
 
     if (contactForm && formFeedback && submitBtn) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // 1. Honeypot check — bots fill the hidden field, humans don't
+            const honeypot = document.getElementById('hp-website');
+            if (honeypot && honeypot.value.trim() !== '') return;
+
+            // 2. Bot timing check — reject if submitted under 3 seconds after the
+            //    contact section first became visible (bots submit without reading)
+            if (formVisibleTime === null || Date.now() - formVisibleTime < 3000) {
+                showFeedback('Submission rejected. Please wait a moment and try again.', 'error');
+                return;
+            }
+
+            // 3. Rate limit check
+            if (isRateLimited()) {
+                showFeedback('Too many submissions. Please wait an hour before trying again.', 'error');
+                return;
+            }
+
+            // 4. Validate & sanitize inputs
+            const rawName    = document.getElementById('form-name').value;
+            const rawEmail   = document.getElementById('form-email').value;
+            const rawSubject = document.getElementById('form-subject').value;
+            const rawMessage = document.getElementById('form-message').value;
+
+            const name    = sanitizeInput(rawName).slice(0, 100);
+            const email   = sanitizeInput(rawEmail).slice(0, 254);
+            const subject = sanitizeInput(rawSubject).slice(0, 200);
+            const message = sanitizeInput(rawMessage).slice(0, 2000);
+
+            if (!name || !email || !subject || !message) {
+                showFeedback('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                showFeedback('Please enter a valid email address.', 'error');
+                return;
+            }
 
             // Disable button and show loading state
             submitBtn.disabled = true;
             const originalBtnHtml = submitBtn.innerHTML;
             submitBtn.innerHTML = '<span class="btn-text">Sending...</span><span class="btn-icon"><i class="fa-solid fa-circle-notch fa-spin"></i></span>';
 
-            const name = document.getElementById('form-name').value;
-            const email = document.getElementById('form-email').value;
-            const subject = document.getElementById('form-subject').value;
-            const message = document.getElementById('form-message').value;
-
-            // Submit using Web3Forms API endpoint to route to sharmal.codex@gmail.com
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: {
@@ -245,19 +329,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             })
                 .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
+                    if (!response.ok) throw new Error('Network response was not ok');
                     return response.json();
                 })
                 .then(data => {
                     if (data.success === 'true' || data.success === true) {
-                        // Display success messaging
-                        formFeedback.textContent = `Thank you, ${name}! Your message has been sent successfully. I will get in touch with you soon.`;
-                        formFeedback.className = 'form-feedback success';
-                        formFeedback.style.display = 'block';
-
-                        // Reset form fields
+                        showFeedback(`Thank you, ${name}! Your message has been sent successfully. I will get in touch with you soon.`, 'success');
                         contactForm.reset();
                     } else {
                         throw new Error(data.message || 'Web3Forms responded with error status');
@@ -265,20 +342,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
                 .catch(error => {
                     console.error('Contact submission error:', error);
-                    // Display error messaging
-                    formFeedback.textContent = 'Oops! There was a problem sending your message. Please try again or email me directly.';
-                    formFeedback.className = 'form-feedback error';
-                    formFeedback.style.display = 'block';
+                    showFeedback('Oops! There was a problem sending your message. Please try again or email me directly.', 'error');
                 })
                 .finally(() => {
-                    // Restore button
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalBtnHtml;
-
-                    // Hide feedback after 8 seconds
-                    setTimeout(() => {
-                        formFeedback.style.display = 'none';
-                    }, 8000);
                 });
         });
     }
